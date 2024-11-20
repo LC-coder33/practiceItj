@@ -1,5 +1,6 @@
 package com.example.practice.vo;
 
+
 public class MemberVO {
 	// html의 name이름과 vo의 변수명과 데이터베이스 컬럼은
 	// 일치해야 자동으로 매핑 해 준다. 

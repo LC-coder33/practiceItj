@@ -1,15 +1,16 @@
 package com.example.practice.controller;
 
 import com.example.practice.service.IF_MemberService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+@RequiredArgsConstructor
 public class SampleController {
 
-    @Autowired
-    IF_MemberService memberservice;
+    private final IF_MemberService memberservice;
 
     @GetMapping("/")
     public String index() throws Exception {
