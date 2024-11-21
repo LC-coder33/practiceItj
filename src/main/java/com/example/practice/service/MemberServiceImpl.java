@@ -2,13 +2,16 @@ package com.example.practice.service;
 
 import com.example.practice.repository.IF_MemberDao;
 import com.example.practice.vo.MemberVO;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service    // 해당 클래스를 객체로 만들어라..
+@RequiredArgsConstructor
 public class MemberServiceImpl implements IF_MemberService{
-	@Autowired
-	IF_MemberDao memberdao;
+
+	private final IF_MemberDao memberdao;
+
 	@Override
 	public void join(MemberVO membervo) throws Exception {
 		System.out.println("join 서비스");
